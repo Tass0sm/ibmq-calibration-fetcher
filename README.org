@@ -12,12 +12,13 @@ python fetch_calibration_data.py
 * How to Automate with systemd
 
 1. Launch an X11 graphical linux environment
-2. Find the values for the environment variables DISPLAY, XAUTHORITY.
-3. Set the values in systemd/fetch-quantum-data.service
-4. Check the cd location in run.sh
-5. Edit the ExecStart line in systemd/fetch-quantum-data.service to point to the run.sh file
-6. Check the OnCalendar line in systemd/fetch-quantum-data.timer
-7. Install these two files in the linux user's ~/.config/systemd/user/ directory
-8. systemd --user daemon-reload
-9. test with systemctl --user start fetch-quantum-data.service
-10. systemd --user enable fetch-quantum-data.timer
+2. install chromium
+3. Find the values for the environment variables DISPLAY, XAUTHORITY.
+4. Set the values in systemd/fetch-quantum-data.service
+5. Check the cd location in run.sh
+6. Edit the ExecStart line in systemd/fetch-quantum-data.service to point to the run.sh file
+7. Check the OnCalendar line in systemd/fetch-quantum-data.timer
+8. Install these two files in the linux user's ~/.config/systemd/user/ directory
+9. systemd --user daemon-reload
+10. test with systemctl --user start fetch-quantum-data.service
+11. systemd --user enable fetch-quantum-data.timer
