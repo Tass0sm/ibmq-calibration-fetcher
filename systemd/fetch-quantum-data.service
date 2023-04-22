@@ -1,11 +1,11 @@
 [Unit]
-Description=Fetch quantum data. Needs to launch a browser.
+Description=Fetch quantum data.
 
 [Service]
 Type=oneshot
 Environment=DISPLAY=:1
 Environment=XAUTHORITY=/home/tassos/.local/share/sx/xauthority
-ExecStart=/home/tassos/software/ibmq-calibration-fetcher/run.sh
+ExecStart=sh -c /home/tassos/software/ibmq-calibration-fetcher/run.sh
 After=network-online.target
 Wants=network-online.target
 

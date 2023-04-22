@@ -4,9 +4,11 @@ IBM Quantum calibration data fetcher using Selenium.
 
 #+begin_src emacs-lisp
 git clone https://github.com/Tass0sm/ibmq-calibration-fetcher
-cd ibmq-calibration-fetcher
-pip install .
-python fetch_calibration_data.py
+pip install ./ibmq-calibration-fetcher
+python ibmq-calibration-fetcher/fetch_calibration_data.py
+# or
+chmod +x run.sh
+./ibmq-calibration-fetcher/fetch_calibration_data.py
 #+end_src
 
 * How to Automate with systemd
