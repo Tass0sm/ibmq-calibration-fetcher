@@ -1,0 +1,13 @@
+[Unit]
+Description=Fetch quantum data. Needs to launch a browser.
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:1
+Environment=XAUTHORITY=/home/tassos/.local/share/sx/xauthority
+ExecStart=/home/tassos/work/quantum/calibration-data/run.sh
+After=network-online.target
+Wants=network-online.target
+
+[Install]
+WantedBy=fetch-quantum-data.timer
