@@ -3,7 +3,7 @@ Description=Fetch quantum data every day
 
 [Timer]
 OnStartupSec=300 seconds
-OnCalendar=*-*-* 13,19,01,07:00:00
+OnCalendar=*-*-* *:00,30:00
 OnCalendar=daily
 # Persistent=true
  
