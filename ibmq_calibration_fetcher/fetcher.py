@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from bs4 import BeautifulSoup
+
 import pygraphviz as pgv
 import re
 import numpy as np
 import pandas as pd
 
-from utils import *
+from ibmq_calibration_fetcher.utils import *
 
 def fetch_and_save_system_calibration_data(driver, system, today):
     driver.get(f"https://quantum-computing.ibm.com/services/resources?tab=systems&view=grid&system={system}")
