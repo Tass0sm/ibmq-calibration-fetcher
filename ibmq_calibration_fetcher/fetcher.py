@@ -43,8 +43,9 @@ def fetch_and_save_system_calibration_data(driver, system, today):
         except ValueError:
             return False
 
-    # filter non numeric columns and save the df
+    df = df.replace("", "0.0")
     column_mask = df.applymap(is_floaty).all(0).values
+
     simple_values_df = df.loc[:, column_mask].astype("float64")
     simple_values_df.to_csv(f"./{today}-{system}-values.csv")
 

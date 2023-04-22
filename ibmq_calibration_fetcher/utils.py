@@ -23,7 +23,7 @@ def edge_list_text_to_dict(text):
             result[to_vertex] = float(value)
         return result
     except ValueError:
-        print(text)
+        # print(text)
         return {}
 
 def edge_text_column_to_graph(values, name):

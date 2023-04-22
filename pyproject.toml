@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "calibration-fetcher-2"
+name = "ibmq-calibration-fetcher"
 version = "0.1.0"
 description = "Browser automation script for fetching quantum calibration data"
 authors = ["Tassos Manganaris <tassos.manganaris@gmail.com>"]
 license = "GPL3+"
 readme = "README.org"
-packages = [{include = "calibration_fetcher_2"}]
+packages = [{include = "ibmq_calibration_fetcher"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
