@@ -57,3 +57,10 @@ def fetch_and_save_system_calibration_data(driver, system, today):
         graph = edge_text_column_to_graphviz_graph(column)
         with open(f"./{today}-{system}-{name}.dot", "w") as f:
             f.write(str(graph))
+
+    # Summarize:
+    print(f"Finished {system}")
+    print("MEANS:")
+    print(simple_values_df.mean(axis=0))
+    print("STD DEVS:")
+    print(simple_values_df.std(axis=0))
