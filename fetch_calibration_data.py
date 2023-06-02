@@ -3,18 +3,18 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chromium.options import ChromiumOptions
 from datetime import datetime
 
 from ibmq_calibration_fetcher.fetcher import fetch_and_save_system_calibration_data
 
 def main():
-    options = Options()
+    options = ChromiumOptions()
     options.add_argument("--headless")
-    driver = webdriver.Firefox(options=options)
+    driver = webdriver.Chrome(options=options)
     now = datetime.now().isoformat()
 
-    for system in ["ibm_washington", "ibm_sherbrooke", "ibm_kyiv"]:
+    for system in ["ibm_brisbane", "ibm_sherbrooke", "ibm_kyiv"]:
         fetch_and_save_system_calibration_data(driver, system, now)
 
     driver.quit()
